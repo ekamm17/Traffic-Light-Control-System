@@ -10,6 +10,7 @@ The traffic light control system consists of:
 6 states
 
 ## State Diagram
+
 ![states](images/states.png)
 ![moore](images/moore.jpeg)
 
@@ -31,6 +32,7 @@ Simulation waveform: https://drive.google.com/file/d/1i65geBSB8cCKDr96NO9i9tPhoW
 To implement the module on an FPGA board, I first modified the Arty A7-100T constraint file to configure all required ports.
 
 ## Port configuration
+
 ![artyx](images/artyx.png)
 
 On the FPGA, the following ports were used:
@@ -40,10 +42,12 @@ On the FPGA, the following ports were used:
 
 ## Synthesis
 The synthesis tool analyzes the RTL code and translates it into a network of logic gates and registers. The result is a netlist that describes how the design should be implemented in hardware.
+
 ![synthesised](images/synthesised.png)
 
 ## Implementation
 Implementation is the process that takes the synthesized netlist and maps it onto the actual FPGA hardware. It involves two key steps: placement and routing.
+
 ![implemented](images/implemented.png)
 
 ## Generate bitsream
