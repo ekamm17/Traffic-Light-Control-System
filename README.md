@@ -1,5 +1,6 @@
 # Traffic Light Control System using FPGA
 I developed a traffic light control system for a T-intersection of a highway and a country road using a finite state machine (FSM) using Verilog. It has additional feature to take in account country road vehicles and accordingly give green light. Then I implemented the design on the Xilinx Arty A7-100T FPGA Board.
+
 ![diagram](images/diagram.png)
 
 ## Specifications
@@ -11,6 +12,7 @@ The traffic light control system consists of:
 ## State Diagram
 ![states](images/states.png)
 ![moore](images/moore.jpeg)
+
 The states are chosen so that each lane has atleast one green light to move to any of the other two roads atleast once in a given cycle.
 I tried to give practical green and yellow light times for all lanes.
 * The initial state SO is ON for the most time (64 seconds). This is because most traffic flows in this orientation
@@ -30,6 +32,7 @@ To implement the module on an FPGA board, I first modified the Arty A7-100T cons
 
 ## Port configuration
 ![artyx](images/artyx.png)
+
 On the FPGA, the following ports were used:
 * 2 switches: for inputs reset and CR_Vehicle_Detect
 * 1 LED: for clock of period 1 second, ie, LED blinks after 1 second interval
